@@ -3,23 +3,30 @@
 */
 
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v8/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
+}
+
+
 /* 
 ==========================================================================
 Globals
 ==========================================================================
 */
-html {
-    box-sizing: border-box;
-    min-height: 100%;
-    margin: auto;
-}
 
-body {
-    margin: 0;
-    background-image: url("img/bg.png");
-    background: fixed;
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
+html {
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+	background-image: url("I:/CodeCool/Python/Web Module/JavaScript/JavaScript-Calculator_Gabor_Koncz/img/bg.png");
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 
@@ -30,30 +37,132 @@ Calculator
 */
 
 #container-calc {
-    width: 325px;
-    height: auto;
-    margin: 100px auto;
-    background-color: #dddddd;
-	border-radius: 3px;  
-}
-/*buttons*/
-.buttons span {
-	float: left;
-	width: 66px;
-	height: 40px;
-	background: white;
+    min-width: 281px;
+  	max-width: 281px;
+  	height: 481px;
+  	background: #212121;
 	border-radius: 3px;
-	margin: 0 7px 11px 0;
-	line-height: 40px;
+  	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  width: 280px;
+  background: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  padding: 3px 5px 0px 5px;
+}
+.nav .close i {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+.nav .minify {
+  margin-left: 5px;
+}
+.nav .minify i {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.result {
+	position: relative;
+  	height: 130px;
+  	border-radius: 5px 5px 0px 0px;
+  	padding: 0px 20px;
+	background: -webkit-linear-gradient(#424242, #212121); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#424242, #212121); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#424242, #212121); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#424242, #212121); /* Standard syntax (must be last) */
+}
+
+.result .entered {
+  	position: absolute;
+  	top: 35px;
+  	right: 20px;
+}
+
+.result .entered p {
+  	color: #727272;
+  	display: inline;
+}
+
+.result .entered p:first-child, .result .entered p:nth-child(2), .result .entered p:nth-child(3) {
+  	margin-right: 3px;
+}
+.result .current {
+  	position: absolute;
+  	bottom: 30px;
+  	right: 20px;
+}
+.result .current h1 {
+  	font-size: 2.5em;
+  	color: white;
+  	font-weight: 300;
+}
+
+.row {
+	width: 325px;
+}
+
+/*buttons*/
+.buttons {
+	margin: 0;
+	height: 350px;
+}
+.buttons span {
+	font-size: 1.5em;
+	font-weight: 100;
+	line-height: 69px;
+	float: left;
+	width: 69px;
+  	height: 69px;
+	background: -webkit-linear-gradient(#EEEEEE, #E0E0E0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#EEEEEE, #E0E0E0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#EEEEEE, #E0E0E0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#EEEEEE, #E0E0E0); /* Standard syntax (must be last) */
+	margin: 0.5px;
+  	cursor: pointer;
 	text-align: center;
 }
 
-.test {
-    display: block;
-    text-align: center;
-    padding: 0.5em;
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: #ABCDEF;
+.buttons .operator span {
+	background: -webkit-linear-gradient(#FF8A65, #FF7043); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FF8A65, #FF7043); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FF8A65, #FF7043); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FF8A65, #FF7043); /* Standard syntax (must be last) */
 }
+
+.buttons span:active {
+  	box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
+
+}
+
+
+
+
+/* 
+==========================================================================
+Notepad
+==========================================================================
+*/

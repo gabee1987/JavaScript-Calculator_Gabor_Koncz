@@ -1,0 +1,59 @@
+/* CSS for JavaScript-Calculator assignment 
+    by Gabor Koncz
+*/
+
+
+/* 
+==========================================================================
+Globals
+==========================================================================
+*/
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    background-image: url("img/bg.png");
+    background: fixed;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* 
+==========================================================================
+Calculator
+==========================================================================
+*/
+
+#container-calc {
+    width: 325px;
+    height: auto;
+    margin: 100px auto;
+    background-color: #dddddd;
+	border-radius: 3px;  
+}
+/*buttons*/
+.buttons span {
+	float: left;
+	width: 66px;
+	height: 40px;
+	background: white;
+	border-radius: 3px;
+	margin: 0 7px 11px 0;
+	line-height: 40px;
+	text-align: center;
+}
+
+.test {
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ABCDEF;
+}

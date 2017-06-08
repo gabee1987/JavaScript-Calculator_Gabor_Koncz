@@ -14,11 +14,8 @@
     <body>
         <div class="notepad" id="notepad">
             <h1>Calculations</h1>
-            <ul>
-                <li><span>23+5=28</span></li>
-                <li><span>12*3=36</span></li>
-                <li><span>10/2=5</span></li>
-                <li><span>45-25=20</span></li>
+            <ul id="results">
+                <li></li>
             </ul>
             <div class="trash">
                 <i class="material-icons">delete</i>
@@ -39,43 +36,43 @@
             </div>
             <div class="calc-body">
                 <div class="result">
-                    <div class="entered">
-                        <p class="f_entered"></p><p class="operator"></p><p class="l_entered"></p><p>=</p>
+                    <div class="summary" id="summary">
+                        <p></p>
                     </div>
-                    <div class="current">
-                        <h1>0</h1>	
+                    <div class="current" id="current">
+                        <h1></h1>	
                     </div>
                 </div>
                 <div class="buttons">
                     <div class="row">
-                        <div class="function" ><span id="ce">CE</span></div>
                         <div class="function" ><span id="c">C</span></div>
+                        <div class="function" ><span id="ce">CE</span></div>
                         <div class="function" ><span id="del">DEL</span></div>
                         <div class="operator" ><span id="divide">/</span></div>
                     </div>
                     <div class="row">
-                        <div class="digit-keys"><span id="seven">7</span></div>
-                        <div class="digit-keys"><span id="eight">8</span></div>
-                        <div class="digit-keys"><span id="nine">9</span></div>
-                        <div class="operator" ><span id="multiple">X</span></div>
+                        <div class="digit-key"><span id="seven">7</span></div>
+                        <div class="digit-key"><span id="eight">8</span></div>
+                        <div class="digit-key"><span id="nine">9</span></div>
+                        <div class="operator" ><span id="multiple">*</span></div>
                     </div>
                     <div class="row">
-                        <div class="digit-keys"><span id="four">4</span></div>
-                        <div class="digit-keys"><span id="five">5</span></div>
-                        <div class="digit-keys"><span id="six">6</span></div>
+                        <div class="digit-key"><span id="four">4</span></div>
+                        <div class="digit-key"><span id="five">5</span></div>
+                        <div class="digit-key"><span id="six">6</span></div>
                         <div class="operator"><span id="minus">-</span></div>
                     </div>
                     <div class="row">
-                        <div class="digit-keys"><span id="one">1</span></div>
-                        <div class="digit-keys"><span id="two">2</span></div>
-                        <div class="digit-keys"><span  id="three">3</span></div>
+                        <div class="digit-key"><span id="one">1</span></div>
+                        <div class="digit-key"><span id="two">2</span></div>
+                        <div class="digit-key"><span  id="three">3</span></div>
                         <div class="operator"><span id="plus">+</span></div>
                     </div>
                     <div class="row">
                         <div class="function"><span id="save">save</span></div>
-                        <div class="digit-keys"><span id="zero">0</span></div>
+                        <div class="digit-key"><span id="zero">0</span></div>
                         <div class="operator"><span id="dot">.</span></div>
-                        <div class="operator" id="equal"><span id="equal-sign">=</span></div>
+                        <div class="operator"><span id="equal">=</span></div>
                     </div>
                 </div>
             </div>

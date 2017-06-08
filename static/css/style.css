@@ -103,6 +103,8 @@ Calculator
 }
 
 .result {
+	max-width: 280px;
+ 	overflow: hidden;
 	position: relative;
   	height: 130px;
   	border-radius: 5px 5px 0px 0px;
@@ -113,18 +115,18 @@ Calculator
     background: linear-gradient(#424242, #212121); /* Standard syntax (must be last) */
 }
 
-.result .entered {
+.result .summary {
   	position: absolute;
   	top: 35px;
   	right: 20px;
 }
 
-.result .entered p {
+.result .summary p {
   	color: #727272;
   	display: inline;
 }
 
-.result .entered p:first-child, .result .entered p:nth-child(2), .result .entered p:nth-child(3) {
+.result .summary p:first-child, .result .summary p:nth-child(2), .result .summary p:nth-child(3) {
   	margin-right: 3px;
 }
 .result .current {

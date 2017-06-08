@@ -3,6 +3,12 @@
 */
 
 
+/* 
+==========================================================================
+Globals
+==========================================================================
+*/
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -10,23 +16,33 @@
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v8/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
 }
 
-
-/* 
-==========================================================================
-Globals
-==========================================================================
-*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
-	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	height: 100%;
-	background-image: url("I:/CodeCool/Python/Web Module/JavaScript/JavaScript-Calculator_Gabor_Koncz/img/bg.png");
+	background-image: url("/static/img/bg.png");
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+body {
+	box-sizing: border-box;
+	line-height: 1em;
+	font-size: 1em;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+	overflow: hidden;
 }
 
 
@@ -36,7 +52,7 @@ Calculator
 ==========================================================================
 */
 
-#container-calc {
+.calc-body {
     min-width: 281px;
   	max-width: 281px;
   	height: 481px;
@@ -62,27 +78,28 @@ Calculator
 }
 
 .nav {
-  width: 280px;
-  background: rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  z-index: 3;
-  padding: 3px 5px 0px 5px;
+	background: #424242;
+	border-radius: 3px;
+	width: 280px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	z-index: 3;
+	padding: 3px 5px 0px 5px;
 }
 .nav .close i {
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
+	color: white;
+	font-size: 22px;
+	cursor: pointer;
 }
 .nav .minify {
-  margin-left: 5px;
+  	margin-left: 5px;
 }
 .nav .minify i {
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
+	color: white;
+	font-size: 22px;
+	cursor: pointer;
 }
 
 .result {
@@ -127,7 +144,7 @@ Calculator
 
 /*buttons*/
 .buttons {
-	margin: 0;
+	margin: 0.5px;
 	height: 350px;
 }
 .buttons span {
@@ -166,3 +183,49 @@ Calculator
 Notepad
 ==========================================================================
 */
+
+.notepad {
+	font-family: 'Indie Flower', cursive;
+	position: absolute;
+	top: 350px;
+	left: 550px;
+}
+
+.notepad h1 {
+	font-size: 3em;
+}
+
+.notepad ul {
+	margin-top: 1em;
+	font-size: 2em;
+	list-style-type: none;
+}
+
+.notepad li {
+	cursor: pointer;
+	margin: 0.5em;
+}
+
+.notepad .material-icons { 
+	cursor: pointer;
+	font-size: 36px; 
+}
+
+.notes {
+	font-family: 'Indie Flower', cursive;
+	position: absolute;
+	top: 350px;
+	left: 1100px;
+}
+
+.notes h1 {
+	font-size: 3em;
+}
+
+.notes textarea {
+	font-family: 'Indie Flower', cursive;
+	font-size: 2em;
+	margin-top: 1em;
+	resize:vertical;
+	border: none;
+}

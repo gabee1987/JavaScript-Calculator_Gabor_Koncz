@@ -11,12 +11,19 @@
         <script src='static/js/extras.js'></script>
         <title>JS Calculator</title>
     </head>
-    <body>
+    <body onload="startTime()">
+        <div id="clock"></div>
+        <div class="search">
+            <!--<form>
+                <input id="search_text" type="text" name="search" placeholder="What are we searching for?">
+                <input id="search_submit" type="submit" value="">
+            </form>-->
+        </div>
         <div class="notepad" id="notepad">
             <h1>Calculations</h1>
-            <ul id="results">
+            <ol id="results">
                 <li></li>
-            </ul>
+            </ol>
             <div class="trash">
                 <i class="material-icons">delete</i>
             </div>

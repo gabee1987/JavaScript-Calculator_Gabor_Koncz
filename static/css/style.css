@@ -61,6 +61,7 @@ Calculator
 	z-index: 3;
 }
 
+/*Calculator body*/
 .calc-body {
     min-width: 281px;
   	max-width: 281px;
@@ -70,6 +71,7 @@ Calculator
   	box-shadow: 0px 2px 12px #212121;
 }
 
+/*Google material icon*/
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -86,6 +88,7 @@ Calculator
 	-webkit-font-smoothing: antialiased;
 }
 
+/*Calculator header*/
 .nav {
 	background: #424242;
 	border-radius: 3px;
@@ -111,6 +114,7 @@ Calculator
 	cursor: pointer;
 }
 
+/*Calculator display*/
 .result {
 	max-width: 280px;
  	overflow: hidden;
@@ -136,7 +140,7 @@ Calculator
   	display: inline;
 }
 
-.result .summary p:first-child, .result .summary p:nth-child(2), .result .summary p:nth-child(3) {
+.result .summary p {
   	margin-right: 3px;
 }
 .result .current {
@@ -154,7 +158,7 @@ Calculator
 	width: 325px;
 }
 
-/*buttons*/
+/*Calculator buttons*/
 .buttons {
 	margin: 0.5px;
 	height: 350px;
@@ -204,6 +208,7 @@ Notepad
 ==========================================================================
 */
 
+/*Calculations notes*/
 .notepad {
 	font-family: 'Indie Flower', cursive;
 	position: absolute;
@@ -226,11 +231,13 @@ Notepad
 	margin: 0.5em;
 }
 
+/*Google material icon*/
 .notepad .material-icons { 
 	cursor: pointer;
 	font-size: 36px;
 }
 
+/*Notes*/
 .notes {
 	font-family: 'Indie Flower', cursive;
 	position: absolute;
@@ -258,6 +265,7 @@ Searchbar
 ==========================================================================
 */
 
+/*
 .search {
 	top: 240px;
 	left: 1500px;
@@ -288,7 +296,13 @@ Searchbar
 	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 	cursor: pointer;
 }
+*/
 
+/* 
+==========================================================================
+Search button
+==========================================================================
+*/
 .search input[type="text"]:focus:hover {
   	border-bottom: 1px solid #BBB;
 }
@@ -327,7 +341,7 @@ Clock
 	font-size: 3em;
 	position: absolute;
 	top: 20px;
-	left: 1270px;
+	left: 1255px;
 	z-index: 2;
 	text-shadow: 0px 1px 8px #212121;
 }

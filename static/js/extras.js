@@ -4,10 +4,30 @@ $(document).ready(function() {
         cancel: "#sortable li"
     });
 
+    //Trash
     $('.trash i').click(function() {
         $('.notepad ol').empty();
     })
 
+    //Drag&Drop
+    //document.addEventListener("dragstart", function(event) {
+       //event.dataTransfer.setData("Text", event.target.id);
+    //});
+
+    /* Events fired on the drop target */
+    //document.addEventListener("dragover", function(event) {
+        //event.preventDefault();
+    //});
+
+    //document.addEventListener("drop", function(event) {
+        //event.preventDefault();
+        //if ( event.target.className == "droptarget" ) {
+           // var data = event.dataTransfer.getData("Text");
+           // event.target.appendChild(document.getElementById(data));
+           // }
+    //});
+
+    //Search
     //var searchText = document.getElementById("search_text");
     //var textToHighlight = document.documentElement.innerHTML.indexOf(searchText);
     //function handleKeyPress(e){
@@ -16,7 +36,7 @@ $(document).ready(function() {
             //textToHighlight.css("background-color", "yellow")
         //}
     //}
-
+    //Clock
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -33,6 +53,6 @@ $(document).ready(function() {
         return i;
     }
 
-startTime();
+    startTime();
 
 });

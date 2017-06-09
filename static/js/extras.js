@@ -33,4 +33,6 @@ $(document).ready(function() {
         return i;
     }
 
+startTime();
+
 });

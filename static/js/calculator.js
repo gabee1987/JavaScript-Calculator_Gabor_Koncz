@@ -30,10 +30,6 @@ for(var i = 0; i < keys.length; i++) {
             $('.summary p').empty();
 		}
 
-        //else if(btnVal == '+' || btnVal == '-' || btnVal == '/' || btnVal == '*') {
-			//firstEnteredOutput = input.innerHTML;
-		//}
-
         else if(btnVal == 'DEL') {
             input.innerHTML = input.innerHTML.substring(0, input.innerHTML.length - 1);     
         }

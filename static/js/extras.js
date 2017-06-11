@@ -1,13 +1,19 @@
 $(document).ready(function() {
-    $('ol').sortable({
-        revert: true,
-        cancel: "#sortable li"
-    });
+    //$('ol').sortable({
+        //revert: true,
+        //cancel: "#sortable li"
+    //});
+
+    //List element trash
+        $('#results li.list-trash').on('click', function(){
+            $(this).parent().remove();
+        });
 
     //Trash
     $('.trash i').click(function() {
         $('.notepad ol').empty();
-    })
+    });
+
 
     //Drag&Drop
     //document.addEventListener("dragstart", function(event) {

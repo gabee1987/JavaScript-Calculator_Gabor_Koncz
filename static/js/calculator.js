@@ -50,8 +50,6 @@ for(var i = 0; i < keys.length; i++) {
             $(summary).append('<p>', input.innerHTML, '</p>');
             
 			
-			// Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
-			equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
 			
 			// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
 			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
@@ -102,14 +100,19 @@ for(var i = 0; i < keys.length; i++) {
 		}
 
         else if(btnVal == 'save') {
+			var trash = document.createElement('img');
+			trash.setAttribute('src', '/static/img/trash.svg');
+			trash.setAttribute('class', 'list-trash');
+			trash.setAttribute('alt', 'Trash');
             summary = $('.summary p').html();
             result = $('.current h1').html();
-            summaryToSave = summary.replace(/<[^>]*>/g, "")                             //Remove html elements
-            resultToSave = result.replace(/<[^>]*>/g, "")                               //Remove html elements
-            var node = document.createElement("li");                                    // Create a <li> node
-            var textnode = document.createTextNode(summaryToSave + '=' + resultToSave); // Create a text node
-            node.appendChild(textnode);                                                 // Append the text to <li>
-            document.getElementById("results").appendChild(node);                       // Append <li> to <ul> with id="results"
+            summaryToSave = summary.replace(/<[^>]*>/g, '')                             				//Remove html elements
+            resultToSave = result.replace(/<[^>]*>/g, '')                               				//Remove html elements
+            var node = document.createElement('li');                                    				// Create a <li> node
+            var textnode = document.createTextNode(summaryToSave + '=' + resultToSave); 		// Create a text node
+            node.appendChild(textnode);
+			node.appendChild(trash)                                                 				// Append the text to <li>
+            document.getElementById('results').appendChild(node);                       				// Append <li> to <ul> with id="results"
         }
 		
 		// if any other key is pressed, just append it

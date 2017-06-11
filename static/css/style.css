@@ -9,12 +9,13 @@ Globals
 ==========================================================================
 */
 
-@font-face {
+/*@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v8/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
 }
+*/
 
 * {
   box-sizing: border-box;
@@ -237,6 +238,16 @@ Notepad
 	font-size: 36px;
 }
 
+/*.list-trash {
+	visibility: hidden;
+}*/
+
+.droptarget:hover .list-trash {
+	visibility: visible;
+}
+
+
+
 /*Notes*/
 .notes {
 	font-family: 'Indie Flower', cursive;
@@ -255,6 +266,7 @@ Notepad
 	margin-top: 1em;
 	resize:vertical;
 	border: none;
+	background-color: #fcfcfc;
 }
 
 
@@ -303,6 +315,7 @@ Searchbar
 Search button
 ==========================================================================
 */
+/*
 .search input[type="text"]:focus:hover {
   	border-bottom: 1px solid #BBB;
 }
@@ -329,6 +342,7 @@ Search button
 	cursor: pointer;
 	transition: opacity .4s ease;
 }
+*/
 
 /* 
 ==========================================================================

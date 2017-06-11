@@ -5,10 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="static/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto:100" rel="stylesheet">
-        <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src='static/js/calculator.js'></script>
-        <script src='static/js/extras.js'></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>JS Calculator</title>
     </head>
     <body>
@@ -24,15 +21,15 @@
         <div class="notepad" id="notepad">
             <h1>Calculations</h1>
                 <ol id="results">
-                    <li draggable="true" class="droptarget"></li>
+                    <li draggable="true" class="droptarget" id="list-item"></li>
                 </ol>
             <div class="trash">
-                <i class="material-icons">delete</i>
+                <i id="delete-icon" class="material-icons">delete_sweep</i>
             </div>
         </div>
         <div id="notes" class="notes">
             <h1>Notes</h1>
-            <textarea class="droptarget" rows="5" cols="28" placeholder="ideas..."></textarea>
+            <textarea class="droptarget" rows="5" cols="26" placeholder="ideas..."></textarea>
         </div>
         <div id="container-calc">
             <div class="nav">
@@ -86,5 +83,9 @@
                 </div>
             </div>
         </div>
+        <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src='static/js/calculator.js'></script>
+        <script src='static/js/extras.js'></script>
     </body>
 </html>

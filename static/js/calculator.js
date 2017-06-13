@@ -1,6 +1,26 @@
 $(document).ready(function() {
-    $('#container-calc').draggable();
+	var positions = JSON.parse(localStorage.positions || "{}");
+	var calculator = $("[id=container-calc]").attr("id", function (i) {
+        return "draggable_" + i
+    });
+	$.each(positions, function (id, pos) {
+        $("#" + id).css(pos)
+    });
+	calculator.draggable({
+        containment: "#container-calc",
+        scroll: false,
+        stop: function (event, ui) {
+            positions[this.id] = ui.position
+            localStorage.positions = JSON.stringify(positions)
+        }
+    });
 });
+    /*$('#container-calc').draggable(
+		drag: funciton(event,ui){
+      		dragposition = ui.position;
+   }
+	);*/
+//});
 
 $(document).ready(function() {
     $('.minify').on('click', function(event) {
